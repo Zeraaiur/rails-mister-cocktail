@@ -5,6 +5,7 @@
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
+
 }
 
 
@@ -19,6 +20,7 @@
 
 .my-container{
   padding:5%;
+
 
 }
 .left-bar{
@@ -36,13 +38,17 @@
 
 .my-card{
   margin:5px;
-  height:300px;
+  height:350px;
   position:relative;
+
+
+
 }
 
 .my-cards-body{
   position:relative;
   padding: 0px 15px;
+  overflow:hidden;
 
 }
 .my-card-image{
@@ -50,12 +56,24 @@
   height:150px!important;
   background-position:center;
   background-size:cover;
-
 }
+.my-card li{
+  color:#bbb;
+  font-size:0.8em;
+}
+
+
+
 .my-card-footer{
   position:absolute;
   bottom:0px;
   width:100%;
+  .trashcan{
+    color:$orange1;
+    }
+   .trashcan:hover{
+    opacity:0.5;
+    }
 }
 // MY BANNER
 .my-header{
@@ -67,6 +85,8 @@
   align-items: center;
   justify-content: center;
   background-size:cover;
+    margin-top:70px;
+
 }
 
 .banner h1 {
