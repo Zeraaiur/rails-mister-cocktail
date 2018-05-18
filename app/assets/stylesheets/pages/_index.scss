@@ -111,6 +111,8 @@
   display: -webkit-flex;
   flex-wrap: wrap;
   margin-bottom:50px;
+  min-height: calc(100vh - 120px);
+
 }
 .right-bar{
   padding: 100px 40px;
