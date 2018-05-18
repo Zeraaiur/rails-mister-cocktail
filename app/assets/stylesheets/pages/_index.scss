@@ -7,7 +7,11 @@
   flex-wrap: wrap;
 
 }
+.my-btn{
+  background-color:#A5E7F3;
+  padding: 10px 40px;
 
+}
 
 /* Smartphones (paysage) ----------- */
 @media only screen and (max-width : 620px) {
@@ -40,10 +44,11 @@
   margin:5px;
   height:350px;
   position:relative;
-
-
-
 }
+.my-card:hover .card-linear-gradient{
+    opacity:0;
+    transition: opacity .5s ease-in-out;
+    }
 
 .my-cards-body{
   position:relative;
@@ -51,12 +56,18 @@
   overflow:hidden;
 
 }
+
 .my-card-image{
   padding:0px!important;
   height:150px!important;
   background-position:center;
   background-size:cover;
 }
+.card-linear-gradient{
+  background:linear-gradient(-225deg, rgba(13,13,13,0.7) 0%, rgba(88,51,0,0.3) 50%);
+  height:150px!important;
+}
+
 .my-card li{
   color:#bbb;
   font-size:0.8em;
@@ -65,11 +76,14 @@
 
 
 .my-card-footer{
+  background-color:#EFF5C3;;
   position:absolute;
   bottom:0px;
   width:100%;
+  text-align:right;
   .trashcan{
     color:$orange1;
+    margin-left:10px;
     }
    .trashcan:hover{
     opacity:0.5;

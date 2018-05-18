@@ -1,7 +1,7 @@
 
 <div class="my-header banner">
   <div class="banner-content">
-    <h1>Mister Cocktails</h1>
+    <h1 id="my-title">Mister Cocktails</h1>
     <p>Learn to code with us in Berlin</p>
     <!-- <a class="btn btn-primary btn-lg"></a> -->
   </div>
@@ -21,9 +21,15 @@
 
   <div class="col-12 col-sm-6 col-md-4">
   <div class="card my-card">
-    <div class="card-img-top my-card-image" style="background-image:linear-gradient(-225deg, rgba(13,13,13,0.7) 0%, rgba(88,51,0,0.3) 50%), url('<%= cl_image_path cocktail.image %>')" alt="Card image cap"></div>
+
+    <div class="card-img-top my-card-image" style="background-image:url('<%= cl_image_path cocktail.image %>')" alt="Card image cap">
+      <div class="card-linear-gradient">
+
+
+    </div>
+    </div>
     <div class="card-body my-cards-body">
-     <h5> <%= link_to cocktail.name, cocktail_path(cocktail)%></h5>
+     <h5> <%= link_to cocktail.name.capitalize, cocktail_path(cocktail)%></h5>
      <ul class="list-inline">
     <% cocktail.ingredients.each do |x| %>
 <li class="list-inline-item text-muted">
@@ -45,13 +51,16 @@
 
     <div class="card-footer my-card-footer">
       <small class="text-muted"><%= link_to "", cocktail_path(cocktail), :class => "far fa-trash-alt trashcan", :method => :delete, :confirm => "Are you sure ?"%></small>
+      <small class="text-muted"><%= link_to "", cocktail_path(cocktail), :class => "far fa-edit trashcan"%></small>
+
+
     </div>
     </div>
 </div>
 <% end %>
 
-</div>
-<%= link_to "Add a cocktail",  new_cocktail_path %>
+</div class="add_button">
+<%= link_to "Add a cocktail",  new_cocktail_path, :class => "btn btn-secondary my-btn"%>
 </div>
 
 <div class="left-bar col-12 col-md-4 col-lg-3">

@@ -1,16 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# # This file should contain all the record creation needed to seed the database with its default values.
+# # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# #
+# # Examples:
+# #
+# #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+# #   Character.create(name: 'Luke', movie: movies.first)
 
 
 
 
 Ingredient.create(name: "ice", category: "juice")
 Ingredient.create(name: "milk", category: "juice")
+Ingredient.create(name: "tomato juice", category: "juice")
 Ingredient.create(name: "orange juice", category: "juice")
 Ingredient.create(name: "Coke", category: "juice")
 Ingredient.create(name: "7up", category: "juice")
@@ -26,6 +27,7 @@ Ingredient.create(name: "mint leaves", category: "fruit")
 Ingredient.create(name: "avocado", category: "fruit")
 Ingredient.create(name: "cherry", category: "fruit")
 Ingredient.create(name: "straberry",  category: "fruit")
+Ingredient.create(name: "celery", category: "fruit")
 Ingredient.create(name: "cucumber",  category: "fruit")
 Ingredient.create(name: "olive",  category: "fruit")
 Ingredient.create(name: "lemon", category: "fruit")
