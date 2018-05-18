@@ -1,0 +1,123 @@
+// Import page-specific CSS files here.
+@import "home";
+
+.main-container{
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+
+/* Smartphones (paysage) ----------- */
+@media only screen and (max-width : 620px) {
+    .main-container{
+  display: block!important;
+}
+  /* Styles */
+}
+
+
+.my-container{
+  padding:5%;
+
+}
+.left-bar{
+  background-color:#EFF5C3;
+  padding: 100px 40px;
+  p{
+    font-size:0.8em;
+  }
+   h3{
+    color:$orange1;
+  font-family: 'Bree Serif', serif;
+   }
+
+}
+
+.my-card{
+  margin:5px;
+  height:300px;
+  position:relative;
+}
+
+.my-cards-body{
+  position:relative;
+  padding: 0px 15px;
+
+}
+.my-card-image{
+  padding:0px!important;
+  height:150px!important;
+  background-position:center;
+  background-size:cover;
+
+}
+.my-card-footer{
+  position:absolute;
+  bottom:0px;
+  width:100%;
+}
+// MY BANNER
+.my-header{
+  min-height: calc(100vh - 120px);
+  background-image:linear-gradient(-225deg, rgba(13,13,13,0.7) 0%, rgba(88,51,0,0.3) 50%), asset-url('photo1.jpg');
+  background-position:center;
+  display: flex;
+  text-align:center;
+  align-items: center;
+  justify-content: center;
+  background-size:cover;
+}
+
+.banner h1 {
+  color:white!important;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+
+
+.my-container-below{
+  background-color:#8C5000;
+    display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  margin-bottom:50px;
+}
+.right-bar{
+  padding: 100px 40px;
+  p{
+    font-size:0.8em;
+    color:#F4F4F4;
+  }
+   h3{
+    color:$orange1;
+  font-family: 'Bree Serif', serif;
+   }
+}
+.my-container2{
+  background-image:linear-gradient(-225deg, rgba(13,13,13,0.7) 0%, rgba(88,51,0,0.3) 50%), asset-url('photo3.jpg');
+  background-position:center;
+  background-size:cover;
+
+}
+
+
+// .card-icons{
+//   position:absolute;
+//   bottom:10px;
+// }
+// .dollar{
+//   padding-left:5px;
+// }
+// .row-cards{
+//   padding:15px;
+// }

@@ -1,0 +1,16 @@
+// Import your layouts CSS files here.
+// Examples:
+// @import "dashboard";
+// @import "profile";
+// @import "map";
+h5 a{
+  color:$orange1;
+  font-family: 'Bree Serif', serif;
+  margin-bottom:0px;
+
+
+}
+h5 a:hover{
+  color:$yellow;
+  text-decoration:none
+  }
