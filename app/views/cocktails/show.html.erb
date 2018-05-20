@@ -1,15 +1,91 @@
+<h2><%= @cocktail.name.capitalize %></h2>
+<hr>
 
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <%= cl_image_tag(@cocktail.image, :alt => @cocktail.name, :class => "image-show")%>
+  </div>
+  <div class="col-xs-12 col-md-6 container-ingredients">
 
-<%= @cocktail.name %>
-<% @cocktail.doses.each do |dose| %>
-<h3><%= dose.ingredient.name %></h3>
-<p><%= dose.description %></p>
+     <% ingredients_array = []  %>
+     <% alcohol = false  %>
+     <% fruit = false  %>
+     <% juice = false  %>
+     <% spice = false  %>
 
-<%= link_to "Delete this ingredient", dose_path(dose), :method => :delete, :confirm => "Are you sure ?"%>
 
-<% end %>
+    <% @cocktail.doses.each do |dose| %>
 
-<%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail[:id])%>
-<%= link_to "Back",  cocktails_path %>
+    <% ingredients_array .push [dose.quantity, dose.ingredient.name, dose.ingredient.category, dose] %>
+    <% end %>
+
+    <% ingredients_array.each do |ingredient| %>
+      <% if ingredient.include?("alcohol") %>
+        <% alcohol = true %>
+      <% end %>
+      <% if ingredient.include?("juice") %>
+        <% juice = true %>
+      <% end %>
+      <% if ingredient.include?("spice") %>
+        <% spice = true %>
+      <% end %>
+      <% if ingredient.include?("fruit") %>
+        <% fruit = true %>
+      <% end %>
+    <% end %>
+
+    <% if alcohol %>
+    <p>Alcohol</p>
+    <% end %>
+      <% ingredients_array.each do |ingredient| %>
+        <% if ingredient[2] == "alcohol" %>
+          <h5><%=  ingredient[0] %> of <%=  ingredient[1] %>
+          <%= link_to "", dose_path(ingredient[3]), :method => :delete, :class => "far fa-trash-alt trashcan-show trashcan"%></h5>
+        <% end %>
+      <% end %>
+
+
+
+
+    <% if juice %>
+     <hr><p>Mixer</p>
+    <% end %>
+
+      <% ingredients_array.each do |ingredient| %>
+        <% if ingredient[2] == "juice" %>
+          <h5><%=  ingredient[0] %> of <%=  ingredient[1] %>
+          <%= link_to "", dose_path(ingredient[3]), :method => :delete, :class => "far fa-trash-alt trashcan-show trashcan"%></h5>
+        <% end %>
+      <% end %>
+
+ <% if fruit %>
+     <hr><p>Food items</p>
+    <% end %>
+
+      <% ingredients_array.each do |ingredient| %>
+        <% if ingredient[2] == "fruit" %>
+          <h5><%=  ingredient[0] %> of <%=  ingredient[1] %>
+          <%= link_to "", dose_path(ingredient[3]), :method => :delete, :class => "far fa-trash-alt trashcan-show trashcan"%></h5>
+        <% end %>
+      <% end %>
+
+      <% if spice %>
+     <hr><p>Spices</p>
+    <% end %>
+
+      <% ingredients_array.each do |ingredient| %>
+        <% if ingredient[2] == "spice" %>
+          <h5><%=  ingredient[0] %> of <%=  ingredient[1] %>
+          <%= link_to "", dose_path(ingredient[3]), :method => :delete, :class => "far fa-trash-alt trashcan-show trashcan"%></h5>
+        <% end %>
+      <% end %>
+      <hr class="last-hr">
+      <p>How to make a <%= @cocktail.name.capitalize %>:</p>
+      <hr>
+    <%= link_to "+ Add ingredient", new_cocktail_dose_path(@cocktail[:id]), :class => "trashcan add-ingredient" %>
+
+
+  </div>
+
+</div>
+

@@ -4,6 +4,7 @@ class CreateDoses < ActiveRecord::Migration[5.2]
       t.string :description, presence: true, allow_blank: false
       t.references :cocktail, foreign_key: true
       t.references :ingredient, foreign_key: true
+      t.string :quantity, presence:true
 
       t.timestamps
     end

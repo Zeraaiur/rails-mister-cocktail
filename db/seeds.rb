@@ -52,12 +52,40 @@ Ingredient.create(name: "grand marnier", category: "alcohol")
 Ingredient.create(name: "sour puss", category: "alcohol")
 Ingredient.create(name: "white wine", category: "alcohol")
 
-Cocktail.create(name: "mojito", image: "xj8dize3gkifwdojcohc.jpg")
-Cocktail.create(name: "cuba libre", image: "j2jlccgwfhfnf0suzh60.jpg")
-Cocktail.create(name: "cosmo", image: "fddjfhj7gbrbfiuwayvh.jpg")
-Cocktail.create(name: "sangria", image: "qh3gcohqqx4qnoqstlfs.jpg")
-Cocktail.create(name: "bloody caesar", image: "rngjkotndpnhi6mfoj1m.jpg")
-Cocktail.create(name: "tequila sunrise", image: "ectjqr7xkavpdsmmvpwa.jpg")
+Cocktail.create(name: "mojito", image: "xj8dize3gkifwdojcohc.jpg", instruction: "
+Place the mint leaves and 3 or 4 lime slices in a highball glass and crush using a muddler.
+Add the sugar, white rum and ice cubes.
+Top up with club soda.
+Stir using a mixing spoon.
+Garnish with a sprig of mint.")
+Cocktail.create(name: "cuba libre", image: "j2jlccgwfhfnf0suzh60.jpg", instruction: "Pour the rum into a highball glass half-filled with ice cubes.
+Top up with cola.
+Add squeezed lime wedge.
+Stir using a mixing spoon.")
+Cocktail.create(name: "cosmopolitan", image: "fddjfhj7gbrbfiuwayvh.jpg", instruction: "Combine all ingredients in a shaker filled with ice cubes except the cranberries.
+Shake vigorously for 8 to 10 seconds.
+Strain into a martini glass using an ice strainer.
+Garnish with cranberries.
+ ")
+Cocktail.create(name: "brandy sangria", image: "qh3gcohqqx4qnoqstlfs.jpg", instruction: "
+    Combine all ingredients, except for the ice cubes, in a pitcher or punch bowl.
+    Let stand a few hours in the refrigerator.
+    Add the ice cubes just before serving.
+    Stir using a mixing spoon.
+    Serve in old-fashioned glasses containing a few ice cubes, adding fruit slices.
+")
+Cocktail.create(name: "bloody caesar", image: "rngjkotndpnhi6mfoj1m.jpg", instruction: "
+Frost the rim of a highball glass containing a few ice cubes with the lime and celery salt.
+Add all the ingredients, except for the vegetables.
+Stir using a mixing spoon.
+Season with salt and pepper to taste.
+Garnish with the onion, the aspargus and the carrot on a cocktail pick.
+")
+Cocktail.create(name: "tequila sunrise", image: "ectjqr7xkavpdsmmvpwa.jpg", instruction: "Pour the tequila and orange juice in a shaker filled with ice cubes.
+Shake vigorously for 8 to 10 seconds.
+Strain into an old-fashioned glass containing a few ice cubes using an ice strainer.
+Pour in the grenadine syrup.
+Garnish with an orange slice and mint leaf.")
 
 
 

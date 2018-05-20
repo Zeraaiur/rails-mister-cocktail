@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2018_05_17_153320) do
   create_table "cocktails", force: :cascade do |t|
     t.string "name"
     t.string "image"
+    t.text "instruction"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -26,6 +27,7 @@ ActiveRecord::Schema.define(version: 2018_05_17_153320) do
     t.string "description"
     t.bigint "cocktail_id"
     t.bigint "ingredient_id"
+    t.string "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cocktail_id"], name: "index_doses_on_cocktail_id"

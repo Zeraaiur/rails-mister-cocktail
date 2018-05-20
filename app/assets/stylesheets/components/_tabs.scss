@@ -1,8 +1,8 @@
 .list-tabs{
-width:100%;
+// width:100%;
 margin-bottom:30px;
   background-color:#0D0D0D;
-  margin-bottom:5%;
+
 }
 
 
@@ -27,14 +27,14 @@ display: flex;
 .tabs h3 {
   font-size: 17px;
   font-weight: bold;
-  margin-top: 0;
+  margin-top: 5px;
 }
 
 .tab {
   background: #8C5000;
   border-top-left-radius:15px;
   border-top-right-radius:15px;
-  flex: 0 0 34%;
+  flex: 33 33 33%;
   text-align: center;
   padding: 15px 0;
   border-left:1px solid #0D0D0D;
@@ -54,7 +54,7 @@ display: flex;
 
 // S
 .tab.active {
-  background: #F4F4F4;
+  background: white;
   color: black;
 
 }

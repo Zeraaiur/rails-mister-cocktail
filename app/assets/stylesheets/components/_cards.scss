@@ -1,0 +1,55 @@
+
+.my-card{
+  height:350px;
+  position:relative;
+  margin-top:20px;
+  margin-bottom:10px;
+
+}
+.my-card:hover .card-linear-gradient{
+    opacity:0;
+    transition: opacity .5s ease-in-out;
+    }
+
+.my-cards-body{
+  position:relative;
+  padding: 0px 15px;
+  overflow:hidden;
+
+
+}
+
+.my-card-image{
+  padding:0px!important;
+  height:150px!important;
+  background-position:center;
+  background-size:cover;
+}
+.card-linear-gradient{
+  background:linear-gradient(-225deg, rgba(13,13,13,0.7) 0%, rgba(88,51,0,0.3) 50%);
+  height:150px!important;
+}
+
+.my-card li{
+  color:#bbb;
+  font-size:0.8em;
+}
+
+
+
+.my-card-footer{
+  background-color:#f4f4f4;;
+  position:absolute;
+  bottom:0px;
+  width:100%;
+  text-align:right;
+
+}
+  .trashcan{
+    color:$orange1;
+    margin-left:10px;
+    }
+   .trashcan:hover{
+    color:$orange1;
+    opacity:0.5;
+    }

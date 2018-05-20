@@ -1,0 +1,31 @@
+.image-show{
+width:100%;
+margin-bottom:15px;
+}
+.container-ingredients{
+text-align:left;
+h5{
+  line-height:0.6;
+  color:#999;
+}
+ p{
+    font-size:60%;
+    color:#bbb;
+  }
+  hr{
+    margin-top:0px;
+    margin-bottom:8px;
+  }
+
+}
+.trashcan-show{
+font-size:70%;
+}
+.add-ingredient{
+  margin:0px;
+}
+.last-hr{
+  border-color:$orange;
+  opacity:0.3;
+  margin-top:20px!important;
+}

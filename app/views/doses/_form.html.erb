@@ -1,6 +1,10 @@
 <%= simple_form_for [@cocktail, @dose] do |f| %>
 
+
+<% test = [ "0.5 oz", "1 oz", "1.5 oz", "2 oz", "2.5 oz", "3 oz", "3.5 oz", "4 oz","4.5 oz", "5 oz"  ] %>
+
 <%= f.input :ingredient_id, collection: Ingredient.all %>
+<%= f.input :quantity, :collection => test %>
 <%= f.input :description %>
 
 <%= f.submit %>

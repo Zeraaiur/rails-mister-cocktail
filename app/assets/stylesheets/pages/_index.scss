@@ -1,93 +1,72 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "show";
 
 .main-container{
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
-
-}
-.my-btn{
-  background-color:#A5E7F3;
-  padding: 10px 40px;
-
 }
 
-/* Smartphones (paysage) ----------- */
-@media only screen and (max-width : 620px) {
-    .main-container{
-  display: block!important;
-}
-  /* Styles */
-}
+
+// /* Smartphones (paysage) ----------- */
+// @media only screen and (max-width : 543px) {
+//     .main-container{
+//   display: inline-block!important;
+// }
+// }
 
 
 .my-container{
+padding: 0px 0px 100px 0px;
+background-color:white;
+}
 
-padding: 0 0px;
+.left-bar{
+  position:relative;
+  background-color:#EFF5C3;
+
+  box-shadow: -1px 1px 1px #ddd;
 
 }
-.left-bar{
-  background-color:#EFF5C3;
-  padding: 100px 40px;
+
+
+.left-bar-after{
+  background: asset-url("FreeVectorDamaskPattern.jpg");
+  opacity: 0.02;
+  background-repeat:repeat;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+
+}
+
+
+.left-bar-after2{
+    top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+
+    padding: 100px 40px;
   p{
     font-size:0.8em;
+    opacity:1;
   }
    h3{
     color:$orange1;
   font-family: 'Bree Serif', serif;
    }
-
-}
-
-.my-card{
-  height:350px;
-  position:relative;
-}
-.my-card:hover .card-linear-gradient{
-    opacity:0;
-    transition: opacity .5s ease-in-out;
-    }
-
-.my-cards-body{
-  position:relative;
-  padding: 0px 15px;
-  overflow:hidden;
-
-}
-
-.my-card-image{
-  padding:0px!important;
-  height:150px!important;
-  background-position:center;
-  background-size:cover;
-}
-.card-linear-gradient{
-  background:linear-gradient(-225deg, rgba(13,13,13,0.7) 0%, rgba(88,51,0,0.3) 50%);
-  height:150px!important;
-}
-
-.my-card li{
-  color:#bbb;
-  font-size:0.8em;
 }
 
 
 
-.my-card-footer{
-  background-color:#EFF5C3;;
-  position:absolute;
-  bottom:0px;
-  width:100%;
-  text-align:right;
-  .trashcan{
-    color:$orange1;
-    margin-left:10px;
-    }
-   .trashcan:hover{
-    opacity:0.5;
-    }
-}
+
+
+
 // MY BANNER
 .my-header{
   min-height: calc(100vh - 120px);
@@ -120,11 +99,11 @@ padding: 0 0px;
 
 .my-container-below{
   background-color:#8C5000;
-    display: flex;
-  display: -webkit-flex;
-  flex-wrap: wrap;
+  //   display: flex;
+  // display: -webkit-flex;
+  // // flex-wrap: wrap;
   margin-bottom:50px;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 70px);
 
 }
 .right-bar{
@@ -142,6 +121,8 @@ padding: 0 0px;
   background-image:linear-gradient(-225deg, rgba(13,13,13,0.7) 0%, rgba(88,51,0,0.3) 50%), asset-url('photo3.jpg');
   background-position:center;
   background-size:cover;
+  height:100%;
+  min-height:200px;
 
 }
 .row-button{
@@ -160,3 +141,7 @@ padding: 0 0px;
 // .row-cards{
 //   padding:15px;
 // }
+.container-yield{
+  text-align:center;
+
+}
