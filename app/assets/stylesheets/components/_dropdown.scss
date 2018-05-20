@@ -1,0 +1,20 @@
+// <!-- DROPDOWN AVEC TOUS LES COCKTAILS. A REMPLACER PAR UNE BARRE DE RECHERCHE EVENTUELLEMENT -->
+
+//  <div class="dropdown">
+//   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">All Cocktails!
+//   <span class="caret"></span></button>
+//   <ul class="dropdown-menu">
+// <% @cocktails.each do |cocktail| %>
+//     <li><%= link_to cocktail.name.capitalize, cocktail_path(cocktail)%></li>
+//     <% end  %>
+//   </ul>
+// </div>
+// .my-dropdown-container{
+//   position:relative;
+// }
+// // </div>
+// .list-box{
+//   position:absolute;
+//   top:0;
+//   right:0;
+// }

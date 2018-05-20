@@ -8,5 +8,6 @@
 // layout file, like app/views/layouts/application.html.erb
 // import 'bootstrap';
 
-// import { myfunction } from '../components/dropdown';
-// myfunction();
+// import { inputKeyValue } from '../components/dropdown';
+
+// document.addEventListener("keyup", inputKeyValue, false);

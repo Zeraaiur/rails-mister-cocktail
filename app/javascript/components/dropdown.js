@@ -1,22 +1,48 @@
-// import swal from 'sweetalert';
-
-// function bindSweetAlertButtonDemo() {
-//   document.getElementById('sweet-alert-demo').addEventListener('click', () => {
-//     swal({
-//       title: "A nice alert",
-//       text: "This is a great alert, isn't it?",
-//       icon: "success"
-//     })
-//   });
+// function cleanResults() {
+//   const list = document.getElementById("results");
+//   while (list.hasChildNodes()) {
+//     list.removeChild(list.firstChild);
+//   }
 // }
-// export { bindSweetAlertButtonDemo };
+
+// function inputKeyValue() {
+//   cleanResults();
+//   // test
+//    alert (cocktails_array);
 
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+//   let index = 0;
+//   const input = document.getElementById("search").value;
+
+//   fetch(`https://wagon-dictionary.herokuapp.com/autocomplete/${input}`)
+//     .then(response => response.json())
+//     .then((data) => {
+//       let length = data.words.length;
+
+//       if (length > 6) {
+//         length = 6;
+//       }
+
+//       for (index; index < length; index += 1) {
+//         document.getElementById("results").insertAdjacentHTML('beforeend', `<li class="list-group-item">${data.words[index]}</li>`);
+//       }
+
+//       document.querySelectorAll("li").forEach((list) => {
+//         list.addEventListener("mouseover", (event) => {
+//           event.currentTarget.classList.add("active");
+//         });
+//         list.addEventListener("mouseout", (event) => {
+//           event.currentTarget.classList.remove("active");
+//         });
+//         list.addEventListener("click", (event) => {
+//           document.getElementById("search").value = event.currentTarget.innerHTML;
+//           document.getElementById("search").focus();
+//         });
+//       });
+//     });
+// }
 
 
-// Close the dropdown menu if the user clicks outside of it
 
 
-// export {myfunction}
+export {inputKeyValue}

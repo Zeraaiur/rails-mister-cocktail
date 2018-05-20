@@ -5,94 +5,108 @@
     <p>Learn to code with us in Berlin</p>
     <!-- <a class="btn btn-primary btn-lg"></a> -->
   </div>
-
 </div>
+
+<!-- tout ce qui est en dessous de la banner -->
 <div class="row main-container">
 
+<!-- SECTION DE GAUCHE -->
+  <div class="my-container col-12 col-md-8 col-lg-9 my-dropdown-container" >
 
+    <!-- TABS QUI PRENNTENT TOUTES LA LONGUEUR -->
+    <div class="list-tabs">
 
-
-
-<div class="my-container col-12 col-md-8 col-lg-9">
-
-  <div class="row my-row">
-
-<% @cocktails.take(6).each do |cocktail| %>
-
-  <div class="col-12 col-sm-6 col-md-4">
-  <div class="card my-card">
-
-    <div class="card-img-top my-card-image" style="background-image:url('<%= cl_image_path cocktail.image %>')" alt="Card image cap">
-      <div class="card-linear-gradient">
-
-
-    </div>
-    </div>
-    <div class="card-body my-cards-body">
-     <h5> <%= link_to cocktail.name.capitalize, cocktail_path(cocktail)%></h5>
-     <ul class="list-inline">
-    <% cocktail.ingredients.each do |x| %>
-<li class="list-inline-item text-muted">
-        <% if x.category == "fruit" %>
-            <i class="fas fa-lemon category"></i>
-        <% elsif x.category == "juice" %>
-            <i class="fas fa-tint category" ></i>
-        <% elsif x.category == "alcohol" %>
-            <i class="fas fa-glass-martini category"></i>
-        <% else %>
-            <i class="fas fa-leaf category"></i>
-        <% end %>
-
-    <%= x.name %></li>
-
-    <% end %>
-    </ul>
-    </div>
-
-    <div class="card-footer my-card-footer">
-      <small class="text-muted"><%= link_to "", cocktail_path(cocktail), :class => "far fa-trash-alt trashcan", :method => :delete, :confirm => "Are you sure ?"%></small>
-      <small class="text-muted"><%= link_to "", cocktail_path(cocktail), :class => "far fa-edit trashcan"%></small>
-
+      <div class="tabs">
+        <a class="tab active" href="#">
+          <h3>350</h3>
+        </a>
+        <a class="tab" href="#">
+          <h3>456</h3>
+        </a>
+        <a class="tab" href="#">
+          <h3>189</h3>
+        </a>
+      </div>
 
     </div>
-    </div>
-</div>
-<% end %>
+  <!-- CONTENEUR QUI VA REMPLIR TOUT LE RESTE -->
+  <div class="container-yield" style="padding:40px;">
 
-</div class="add_button">
-<%= link_to "Add a cocktail",  new_cocktail_path, :class => "btn btn-secondary my-btn"%>
-</div>
 
-<div class="left-bar col-12 col-md-4 col-lg-3">
 
-  <h3>About cocktail!</h3>
-  <p>
-  The first "cocktail party" ever thrown was allegedly by Mrs. Julius S. Walsh Jr. of St. Louis, Missouri, in May 1917. Mrs. Walsh invited 50 guests to her home at noon on a Sunday. The party lasted an hour, until lunch was served at 1 pm. The site of this first cocktail party still stands. In 1924, the Roman Catholic Archdiocese of St. Louis bought the Walsh mansion at 4510 Lindell Boulevard, and it has served as the local archbishop's residence ever since.
-  </p><p>
-  During Prohibition in the United States (1919–1933), when alcoholic beverages were illegal, cocktails were still consumed illegally in establishments known as speakeasies. The quality of liquor available during Prohibition was much worse than previously. There was a shift from whiskey to gin, which does not require aging and is therefore easier to produce illicitly. Honey, fruit juices, and other flavorings served to mask the foul taste of the inferior liquors. Sweet cocktails were easier to drink quickly, an important consideration when the establishment might be raided at any moment.
-  <br><br>
-  <i>Source: Wikipedia</i>
-</p>
 
-</div>
-</div>
+ <h3>About cocktail!</h3>
+    <p>
+    The first "cocktail party" ever thrown was allegedly by Mrs. Julius S. Walsh Jr. of St. Louis, Missouri, in May 1917. Mrs. Walsh invited 50 guests to her home at noon on a Sunday. The party lasted an hour, until lunch was served at 1 pm. The site of this first cocktail party still stands. In 1924, the Roman Catholic Archdiocese of St. Louis bought the Walsh mansion at 4510 Lindell Boulevard, and it has served as the local archbishop's residence ever since.
+    </p><p>
+    During Prohibition in the United States (1919–1933), when alcoholic beverages were illegal, cocktails were still consumed illegally in establishments known as speakeasies. The quality of liquor available during Prohibition was much worse than previously. There was a shift from whiskey to gin, which does not require aging and is therefore easier to produce illicitly. Honey, fruit juices, and other flavorings served to mask the foul taste of the inferior liquors. Sweet cocktails were easier to drink quickly, an important consideration when the establishment might be raided at any moment.
+    <br><br>
+    <i>Source: Wikipedia</i>
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+  </div>
+
+
+
+
+
+<!-- SECTION DE DROITE -->
+  <div class="left-bar col-12 col-md-4 col-lg-3">
+    <h3>About cocktail!</h3>
+    <p>
+    The first "cocktail party" ever thrown was allegedly by Mrs. Julius S. Walsh Jr. of St. Louis, Missouri, in May 1917. Mrs. Walsh invited 50 guests to her home at noon on a Sunday. The party lasted an hour, until lunch was served at 1 pm. The site of this first cocktail party still stands. In 1924, the Roman Catholic Archdiocese of St. Louis bought the Walsh mansion at 4510 Lindell Boulevard, and it has served as the local archbishop's residence ever since.
+    </p><p>
+    During Prohibition in the United States (1919–1933), when alcoholic beverages were illegal, cocktails were still consumed illegally in establishments known as speakeasies. The quality of liquor available during Prohibition was much worse than previously. There was a shift from whiskey to gin, which does not require aging and is therefore easier to produce illicitly. Honey, fruit juices, and other flavorings served to mask the foul taste of the inferior liquors. Sweet cocktails were easier to drink quickly, an important consideration when the establishment might be raided at any moment.
+    <br><br>
+    <i>Source: Wikipedia</i>
+    </p>
+  </div>
+ </div>
+
 <div class="my-container-below row">
   <div class="right-bar col-12 col-md-4 col-lg-3">
     <h3>The Party Begins</h3>
-<p>
-The Gilded Age was the golden era of the cocktail. At the turn of the twentieth century, affluent Americans frequented elegant hotels, bars, and restaurants; champagne cocktails were among their favorite drinks.
-</p><p>
-Talented bartenders knew how to make hundreds of cocktails—from the Adonis to the Zaza—and came up with new ones at will. They created and named drinks for regular patrons, news events, cities, and celebrities, and mixed them with great flair. Jerry Thomas was famous for his "Blue Blazer," a mixture of whiskey and boiling water, which he set ablaze and tossed back and forth between two silver-plated mugs. He said it looked like a "stream of liquid fire."
-<br><br>
-  <i>Source: Encyclopedia.com</i>
-</p>
-
-<p>
-
+    <p>
+    The Gilded Age was the golden era of the cocktail. At the turn of the twentieth century, affluent Americans frequented elegant hotels, bars, and restaurants; champagne cocktails were among their favorite drinks.
+    </p><p>
+    Talented bartenders knew how to make hundreds of cocktails—from the Adonis to the Zaza—and came up with new ones at will. They created and named drinks for regular patrons, news events, cities, and celebrities, and mixed them with great flair. Jerry Thomas was famous for his "Blue Blazer," a mixture of whiskey and boiling water, which he set ablaze and tossed back and forth between two silver-plated mugs. He said it looked like a "stream of liquid fire."
+    <br><br>
+    <i>Source: Encyclopedia.com</i>
+    </p>
   </div>
   <div class="my-container2 col-12 col-md-8 col-lg-9">
-
   </div>
-
-
 </div>

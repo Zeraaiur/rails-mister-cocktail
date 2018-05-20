@@ -7,8 +7,6 @@
 # #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
-
 Ingredient.create(name: "ice", category: "juice")
 Ingredient.create(name: "milk", category: "juice")
 Ingredient.create(name: "tomato juice", category: "juice")
@@ -60,3 +58,65 @@ Cocktail.create(name: "cosmo", image: "fddjfhj7gbrbfiuwayvh.jpg")
 Cocktail.create(name: "sangria", image: "qh3gcohqqx4qnoqstlfs.jpg")
 Cocktail.create(name: "bloody caesar", image: "rngjkotndpnhi6mfoj1m.jpg")
 Cocktail.create(name: "tequila sunrise", image: "ectjqr7xkavpdsmmvpwa.jpg")
+
+
+
+new_ingredients = [{name:"Light rum", category:"alcohol"},{name:"Applejack", category:"alcohol"},
+{name:"Gin", category:"alcohol"},{name:"Dark rum", category:"alcohol"},{name:"Sweet Vermouth", category:"alcohol"},
+{name:"Strawberry schnapps", category:"alcohol"},{name:"Scotch", category:"alcohol"},{name:"Apricot brandy", category:"alcohol"},
+{name:"Triple sec", category:"alcohol"},{name:"Southern Comfort", category:"alcohol"},{name:"Orange bitters", category:"alcohol"},
+{name:"Brandy", category:"alcohol"},{name:"Lemon vodka", category:"alcohol"},{name:"Blended whiskey", category:"alcohol"},
+{name:"Dry Vermouth", category:"alcohol"},{name:"Amaretto", category:"alcohol"},{name:"Tea", category:"juice"},
+{name:"Champagne", category:"alcohol"},{name:"Coffee liqueur", category:"alcohol"},{name:"Bourbon", category:"alcohol"},
+{name:"Tequila", category:"alcohol"},{name:"Vodka", category:"alcohol"},{name:"Bitters", category:"alcohol"},
+{name:"Sugar", category:"spice"},{name:"Kahlua", category:"alcohol"},{name:"demerara Sugar", category:"spice"},
+{name:"Dubonnet Rouge", category:"alcohol"},{name:"Lime juice", category:"juice"},{name:"Irish whiskey", category:"alcohol"},
+{name:"Apple brandy", category:"alcohol"},{name:"Carbonated water", category:"juice"},{name:"Cherry brandy", category:"alcohol"},
+{name:"Creme de Cacao", category:"alcohol"},{name:"Grenadine", category:"juice"},{name:"Port", category:"alcohol"},
+{name:"Coffee brandy", category:"alcohol"},{name:"Red wine", category:"alcohol"},{name:"Rum", category:"alcohol"},
+{name:"Grapefruit juice", category:"juice"},{name:"Ricard", category:"alcohol"},{name:"Sherry", category:"alcohol"},
+{name:"Cognac", category:"alcohol"},{name:"Sloe gin", category:"alcohol"},{name:"Apple juice", category:"juice"},
+{name:"Pineapple juice", category:"juice"},{name:"Lemon juice", category:"juice"},{name:"Sugar syrup", category:"juice"},
+{name:"Milk", category:"juice"},{name:"Strawberries", category:"fruit"},{name:"Chocolate syrup", category:"juice"},
+{name:"Yoghurt", category:"juice"},{name:"Mango", category:"fruit"},{name:"Ginger", category:"spice"},{name:"Lime", category:"fruit"},
+{name:"Cantaloupe", category:"fruit"},{name:"Berries", category:"fruit"},{name:"Grapes", category:"fruit"},
+{name:"Kiwi", category:"fruit"},{name:"Tomato juice", category:"juice"},{name:"Cocoa powder", category:"spice"},
+{name:"Chocolate", category:"fruit"},{name:"Heavy cream", category:"fruit"},{name:"Galliano", category:"alcohol"},
+{name:"Peach Vodka", category:"alcohol"},{name:"Ouzo", category:"alcohol"},{name:"Coffee", category:"juice"},
+{name:"Spiced rum", category:"alcohol"},{name:"Water", category:"juice"},{name:"Espresso", category:"alcohol"},
+{name:"Angelica root", category:"spice"},{name:"Orange", category:"fruit"},{name:"Cranberries", category:"fruit"},
+{name:"Johnnie Walker", category:"alcohol"},{name:"Apple cider", category:"alcohol"},{name:"Everclear", category:"alcohol"},
+{name:"Cranberry juice", category:"juice"},{name:"Egg yolk", category:"fruit"},{name:"Egg", category:"fruit"},
+{name:"Grape juice", category:"juice"},{name:"Peach nectar", category:"juice"},{name:"Lemon", category:"fruit"},
+{name:"Firewater", category:"alcohol"},{name:"Lemonade", category:"juice"},{name:"Lager", category:"alcohol"},
+{name:"Whiskey", category:"alcohol"},{name:"Absolut Citron", category:"alcohol"},{name:"Pisco", category:"alcohol"},
+{name:"Irish cream", category:"alcohol"},{name:"Ale", category:"alcohol"},{name:"Chocolate liqueur", category:"alcohol"},
+{name:"Midori melon liqueur", category:"alcohol"},{name:"Sambuca", category:"alcohol"},{name:"Cider", category:"alcohol"},
+{name:"Sprite", category:"juice"},{name:"7-Up", category:"juice"},{name:"Blackberry brandy", category:"alcohol"},
+{name:"Peppermint schnapps", category:"alcohol"},{name:"Creme de Cassis", category:"alcohol"},
+{name:"Jack Daniels", category:"alcohol"},{name:"Bailey's irish cream", category:"alcohol"},{name:"151 proof rum", category:"alcohol"},
+{name:"Absolut Vodka", category:"alcohol"},{name:"Goldschlager", category:"alcohol"},{name:"Crown Royal", category:"alcohol"},
+{name:"Cointreau", category:"alcohol"},{name:"Vermouth", category:"alcohol"},{name:"Advocaat", category:"alcohol"},
+{name:"Absolut Kurant", category:"alcohol"},{name:"Beer", category:"alcohol"},{name:"Kool-Aid", category:"juice"},
+{name:"Cherry Heering", category:"alcohol"},{name:"White Creme de Menthe", category:"alcohol"},
+{name:"Malibu rum", category:"alcohol"},{name:"Vanilla vodka", category:"alcohol"},{name:"J\u00e4germeister", category:"alcohol"},
+{name:"Kiwi liqueur", category:"alcohol"},{name:"Grand Marnier", category:"alcohol"},{name:"Cachaca", category:"alcohol"},
+{name:"Peachtree schnapps", category:"alcohol"},{name:"Wild Turkey", category:"alcohol"},{name:"Cranberry vodka", category:"alcohol"},
+{name:"Corona", category:"alcohol"},{name:"Orange juice", category:"juice"},{name:"Yukon Jack", category:"alcohol"},
+{name:"Chocolate ice-cream", category:"fruit"},{name:"Coconut rum", category:"alcohol"},{name:"Banana liqueur", category:"alcohol"},
+{name:"Black Sambuca", category:"alcohol"},{name:"Hot Damn", category:"alcohol"},{name:"Mint", category:"spice"},
+{name:"Campari", category:"alcohol"},{name:"Ice", category:"juice"},{name:"Sour mix", category:"juice"},
+{name:"Absinthe", category:"alcohol"},{name:"Whisky", category:"alcohol"},{name:"Guinness stout", category:"alcohol"},
+{name:"Vanilla ice-cream", category:"fruit"},{name:"Chambord raspberry liqueur", category:"alcohol"},
+{name:"Jim Beam", category:"alcohol"},{name:"Godiva liqueur", category:"alcohol"},{name:"Fruit punch", category:"juice"},
+{name:"Baileys irish cream", category:"alcohol"},{name:"Zima", category:"alcohol"},{name:"Blue Curacao", category:"alcohol"},
+{name:"Coca-Cola", category:"juice"},{name:"Maui", category:"alcohol"},{name:"Frangelico", category:"alcohol"},
+{name:"Bacardi Limon", category:"alcohol"},{name:"Raspberry vodka", category:"alcohol"},
+{name:"Green Creme de Menthe", category:"alcohol"},{name:"Lemon peel", category:"spice"},{name:"Prosecco", category:"alcohol"},
+{name:"White Rum", category:"alcohol"},{name:"Mezcal", category:"alcohol"},{name:"Green Chartreuse", category:"alcohol"},
+{name:"Grape Soda", category:"juice"},{name:"Hot Chocolate", category:"juice"},{name:"Blended Scotch", category:"alcohol"},
+{name:"Rye whiskey", category:"alcohol"}]
+
+new_ingredients.each do |ingredient|
+  Ingredient.create(ingredient)
+end

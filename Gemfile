@@ -57,7 +57,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
-gem 'bootstrap-sass'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'simple_form'
 gem 'autoprefixer-rails'
@@ -66,3 +65,5 @@ gem 'figaro'
 gem 'cloudinary'
 gem "carrierwave", "~> 1.2"
 gem 'popper_js', '~> 1.12.9'
+gem 'bootstrap-sass'
+# gem 'font-awesome-rails'

@@ -23,8 +23,8 @@
 
 
 .my-container{
-  padding:5%;
 
+padding: 0 0px;
 
 }
 .left-bar{
@@ -41,7 +41,6 @@
 }
 
 .my-card{
-  margin:5px;
   height:350px;
   position:relative;
 }
@@ -145,7 +144,11 @@
   background-size:cover;
 
 }
-
+.row-button{
+  background-color:blue;
+  display:flex;
+  justify-content: space-between;;
+}
 
 // .card-icons{
 //   position:absolute;
