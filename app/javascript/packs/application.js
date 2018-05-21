@@ -8,6 +8,6 @@
 // layout file, like app/views/layouts/application.html.erb
 // import 'bootstrap';
 
-// import { inputKeyValue } from '../components/dropdown';
+import { clickBtnDisplay } from '../components/new_dose';
 
 // document.addEventListener("keyup", inputKeyValue, false);

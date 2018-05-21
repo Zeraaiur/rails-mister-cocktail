@@ -1,12 +1,107 @@
-<%= simple_form_for [@cocktail, @dose] do |f| %>
+<%= form_for [@cocktail, @dose] do |f| %>
 
 
-<% test = [ "0.5 oz", "1 oz", "1.5 oz", "2 oz", "2.5 oz", "3 oz", "3.5 oz", "4 oz","4.5 oz", "5 oz"  ] %>
+<% ingredients = Ingredient.all %>
 
-<%= f.input :ingredient_id, collection: Ingredient.all %>
-<%= f.input :quantity, :collection => test %>
-<%= f.input :description %>
+    <div class="form-class display-none" id="alcohol-form">
+     <% alcohol = [] %>
+        <% ingredients.each do |ingredient| %>
+          <% if ingredient.category == "alcohol" %>
+          <% ingredient.name.capitalize! %>
+            <% alcohol.push(ingredient) %>
+          <% end %>
+        <% end %>
+        <%  alcohol_sort = alcohol.sort_by { |k| k["name"] } %>
+    <% dose = [ "0.5 oz", "1 oz", "1.5 oz", "2 oz", "2.5 oz", "3 oz", "3.5 oz", "4 oz","4.5 oz", "5 oz"  ] %>
+    <%= f.collection_select :ingredient_id, alcohol_sort, :id, :name, {:include_blank => 'Choice of alcohols'} %>
+
+    <%= f.select :quantity, options_for_select(dose) %>
+
+
+
+
+    <%= f.submit %>
+
+<% end %>
+</div>
+<%= form_for [@cocktail, @dose] do |f| %>
+
+
+<% ingredients = Ingredient.all %>
+
+
+    <div class="form-class display-none" id="food-form">
+     <% food = [] %>
+        <% ingredients.each do |ingredient| %>
+          <% if ingredient.category == "fruit" %>
+          <% ingredient.name.capitalize! %>
+            <% food.push(ingredient) %>
+          <% end %>
+        <% end %>
+
+        <%  food_sort = food.sort_by { |k| k["name"] } %>
+    <% dose = [ "0.5 oz", "1 oz", "1.5 oz", "2 oz", "2.5 oz", "3 oz", "3.5 oz", "4 oz","4.5 oz", "5 oz"  ] %>
+    <%= f.collection_select :ingredient_id, food_sort, :id, :name, {:include_blank => 'Choice of food items'} %>
+
+    <%= f.select :quantity, options_for_select(dose) %>
+
+
+
+    <%= f.submit %>
+
+<% end %>
+</div>
+<%= form_for [@cocktail, @dose] do |f| %>
+
+
+<% ingredients = Ingredient.all %>
+
+
+
+    <div class="form-class display-none" id="mixer-form">
+     <% mixer = [] %>
+        <% ingredients.each do |ingredient| %>
+          <% if ingredient.category == "juice" %>
+          <% ingredient.name.capitalize! %>
+            <% mixer.push(ingredient) %>
+          <% end %>
+        <% end %>
+        <%  mixer_sort = mixer.sort_by { |k| k["name"] } %>
+    <% dose = [ "0.5 oz", "1 oz", "1.5 oz", "2 oz", "2.5 oz", "3 oz", "3.5 oz", "4 oz","4.5 oz", "5 oz"  ] %>
+    <%= f.collection_select :ingredient_id, mixer_sort, :id, :name, {:include_blank => 'Choice of mixers'} %>
+
+    <%= f.select :quantity, options_for_select(dose) %>
+
+
+    <%= f.submit %>
+
+<% end %>
+
+</div>
+<%= form_for [@cocktail, @dose] do |f| %>
+
+
+<% ingredients = Ingredient.all %>
+
+
+    <div class="form-class display-none" id="spice-form">
+     <% spice = [] %>
+        <% ingredients.each do |ingredient| %>
+          <% if ingredient.category == "spice" %>
+          <% ingredient.name.capitalize! %>
+            <% spice.push(ingredient) %>
+          <% end %>
+        <% end %>
+        <%  spice_sort = spice.sort_by { |k| k["name"] } %>
+    <% dose = [ "0.5 oz", "1 oz", "1.5 oz", "2 oz", "2.5 oz", "3 oz", "3.5 oz", "4 oz","4.5 oz", "5 oz"  ] %>
+    <%= f.collection_select :ingredient_id, spice_sort, :id, :name, {:include_blank => 'Choice of spices'} %>
+
+    <%= f.select :quantity, options_for_select(dose) %>
+
+
+
+
 
 <%= f.submit %>
-
+</div>
 <% end %>

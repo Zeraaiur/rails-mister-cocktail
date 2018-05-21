@@ -21,9 +21,17 @@ class CocktailsController < ApplicationController
   end
 
   def edit
+    @cocktail = Cocktail.find(params[:id])
   end
 
   def update
+    @cocktail = Cocktail.find(params[:id])
+
+    if @cocktail.update(cocktail_params)
+      redirect_to @cocktail, notice: 'Article was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -37,7 +45,7 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :instruction)
   end
 
 end

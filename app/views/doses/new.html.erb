@@ -1,4 +1,15 @@
-<h1>Dose#new</h1>
-<p>Find me in app/views/dose/new.html.erb</p>
+<h2><%= @cocktail.name.capitalize %></h2>
+
+
+<h3>Add an ingredient</h3>
+
+<ul class="list-inline">
+  <li><button class="btn btn-form-display" id="alcohol-btn">Alcohol</button></li>
+  <li><button class="btn btn-form-display" id="juice-btn">Mixer</button></li>
+  <li><button class="btn btn-form-display" id="food-btn">Food</button></li>
+  <li><button class="btn btn-form-display" id="spice-btn">Spice</button></li>
+</ul>
+
+
 
 <%= render 'form', dose: @dose %>

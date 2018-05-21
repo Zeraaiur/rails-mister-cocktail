@@ -1,6 +1,7 @@
 .image-show{
 width:100%;
 margin-bottom:15px;
+border: 1px solid #f4f4f4;
 }
 .container-ingredients{
 text-align:left;
@@ -16,7 +17,13 @@ h5{
     margin-top:0px;
     margin-bottom:8px;
   }
-
+  ul{
+    list-style:none;
+    padding-left:0px;
+     li{
+    margin-bottom:10px;
+  }
+  }
 }
 .trashcan-show{
 font-size:70%;
@@ -28,4 +35,19 @@ font-size:70%;
   border-color:$orange;
   opacity:0.3;
   margin-top:20px!important;
+}
+.show-instruction{
+  line-height:1!important;
+}
+.edit-button{
+  font-size:40%;
+}
+.edit-button-2{
+  margin-left:0px;
+}
+a:hover{
+  text-decoration:none;
+}
+.display-none{
+  display:none;
 }
