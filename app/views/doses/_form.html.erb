@@ -12,15 +12,12 @@
           <% end %>
         <% end %>
         <%  alcohol_sort = alcohol.sort_by { |k| k["name"] } %>
-    <% dose = [ "0.5 oz", "1 oz", "1.5 oz", "2 oz", "2.5 oz", "3 oz", "3.5 oz", "4 oz","4.5 oz", "5 oz"  ] %>
-    <%= f.collection_select :ingredient_id, alcohol_sort, :id, :name, {:include_blank => 'Choice of alcohols'} %>
+    <% dose = [ "0.5 oz", "1 oz", "1.5 oz", "2 oz", "2.5 oz", "3 oz", "3.5 oz", "4 oz","4.5 oz", "5 oz", "10 oz", "15 oz", "20 oz"  ] %>
+    <%= f.collection_select :ingredient_id, alcohol_sort, :id, :name, {:include_blank => 'Choice of alcohols'}, :class => "form-control my-form-control" %>
 
-    <%= f.select :quantity, options_for_select(dose) %>
+    <%= f.select :quantity, options_for_select(dose), {}, { :class => "form-control my-form-control" } %>
 
-
-
-
-    <%= f.submit %>
+    <%= f.submit 'Add ingredient ', :class => 'form-control my-form-btn' %>
 
 <% end %>
 </div>
@@ -40,14 +37,13 @@
         <% end %>
 
         <%  food_sort = food.sort_by { |k| k["name"] } %>
-    <% dose = [ "0.5 oz", "1 oz", "1.5 oz", "2 oz", "2.5 oz", "3 oz", "3.5 oz", "4 oz","4.5 oz", "5 oz"  ] %>
-    <%= f.collection_select :ingredient_id, food_sort, :id, :name, {:include_blank => 'Choice of food items'} %>
+    <%= f.collection_select :ingredient_id, food_sort, :id, :name, {:include_blank => 'Choice of food items'}, :class => "form-control my-form-control" %>
 
-    <%= f.select :quantity, options_for_select(dose) %>
-
+    <%= text_field :dose, :quantity, :placeholder => "Quantity", :class => "form-control my-form-control" %>
 
 
-    <%= f.submit %>
+
+    <%= f.submit 'Add ingredient ', :class => 'form-control my-form-btn' %>
 
 <% end %>
 </div>
@@ -67,13 +63,12 @@
           <% end %>
         <% end %>
         <%  mixer_sort = mixer.sort_by { |k| k["name"] } %>
-    <% dose = [ "0.5 oz", "1 oz", "1.5 oz", "2 oz", "2.5 oz", "3 oz", "3.5 oz", "4 oz","4.5 oz", "5 oz"  ] %>
-    <%= f.collection_select :ingredient_id, mixer_sort, :id, :name, {:include_blank => 'Choice of mixers'} %>
+    <% dose = [ "0.5 oz", "1 oz", "1.5 oz", "2 oz", "2.5 oz", "3 oz", "3.5 oz", "4 oz","4.5 oz", "5 oz", "10 oz", "15 oz", "20 oz"  ] %>
+    <%= f.collection_select :ingredient_id, mixer_sort, :id, :name, {:include_blank => 'Choice of mixers'}, :class => "form-control my-form-control" %>
 
-    <%= f.select :quantity, options_for_select(dose) %>
+    <%= f.select :quantity, options_for_select(dose), {}, { :class => "form-control my-form-control" } %>
 
-
-    <%= f.submit %>
+    <%= f.submit 'Add ingredient ', :class => 'form-control my-form-btn' %>
 
 <% end %>
 
@@ -93,15 +88,11 @@
           <% end %>
         <% end %>
         <%  spice_sort = spice.sort_by { |k| k["name"] } %>
-    <% dose = [ "0.5 oz", "1 oz", "1.5 oz", "2 oz", "2.5 oz", "3 oz", "3.5 oz", "4 oz","4.5 oz", "5 oz"  ] %>
-    <%= f.collection_select :ingredient_id, spice_sort, :id, :name, {:include_blank => 'Choice of spices'} %>
+    <%= f.collection_select :ingredient_id, spice_sort, :id, :name, {:include_blank => 'Choice of spices'}, :class => "form-control my-form-control" %>
 
-    <%= f.select :quantity, options_for_select(dose) %>
-
+        <%= text_field :dose, :quantity, :placeholder => "Quantity", :class => "form-control my-form-control" %>
 
 
-
-
-<%= f.submit %>
+<%= f.submit 'Add ingredient ', :class => 'form-control my-form-btn' %>
 </div>
 <% end %>
