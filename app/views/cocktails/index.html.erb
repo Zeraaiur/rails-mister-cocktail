@@ -3,7 +3,11 @@
 <div class="row">
 
  <!-- LES 6 CARTES -->
+
+
   <% @cocktails.take(6).each do |cocktail| %>
+         <% ingredient_sorted = cocktail.ingredients.sort{|a,b| a.category <=> b.category } %>
+
     <div class="col-12 col-sm-6 col-md-4">
       <div class="card my-card">
         <div class="card-img-top my-card-image" style="background-image:url('<%= cl_image_path cocktail.image %>')" alt="Card image cap">
@@ -13,7 +17,7 @@
         <div class="card-body my-cards-body">
           <h5> <%= link_to cocktail.name.capitalize, cocktail_path(cocktail)%></h5>
           <ul class="list-inline">
-          <% cocktail.ingredients.each do |x| %>
+          <% ingredient_sorted.each do |x| %>
             <li class="list-inline-item text-muted">
             <% if x.category == "fruit" %>
                 <i class="fas fa-lemon category"></i>

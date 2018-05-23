@@ -4,7 +4,7 @@ class DosesController < ApplicationController
     @dose = Dose.new
   end
 
-  def create
+ def create
     @cocktail = Cocktail.find(params[:cocktail_id])
     @dose = Dose.new(dose_params)
     @dose.cocktail = @cocktail
@@ -14,7 +14,7 @@ class DosesController < ApplicationController
       else
         render :new
       end
-  end
+end
 
   def edit
   end

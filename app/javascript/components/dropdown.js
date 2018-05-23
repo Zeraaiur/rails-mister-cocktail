@@ -1,48 +1,7 @@
-// function cleanResults() {
-//   const list = document.getElementById("results");
-//   while (list.hasChildNodes()) {
-//     list.removeChild(list.firstChild);
-//   }
-// }
-
-// function inputKeyValue() {
-//   cleanResults();
-//   // test
-//    alert (cocktails_array);
-
-
-//   let index = 0;
-//   const input = document.getElementById("search").value;
-
-//   fetch(`https://wagon-dictionary.herokuapp.com/autocomplete/${input}`)
-//     .then(response => response.json())
-//     .then((data) => {
-//       let length = data.words.length;
-
-//       if (length > 6) {
-//         length = 6;
-//       }
-
-//       for (index; index < length; index += 1) {
-//         document.getElementById("results").insertAdjacentHTML('beforeend', `<li class="list-group-item">${data.words[index]}</li>`);
-//       }
-
-//       document.querySelectorAll("li").forEach((list) => {
-//         list.addEventListener("mouseover", (event) => {
-//           event.currentTarget.classList.add("active");
-//         });
-//         list.addEventListener("mouseout", (event) => {
-//           event.currentTarget.classList.remove("active");
-//         });
-//         list.addEventListener("click", (event) => {
-//           document.getElementById("search").value = event.currentTarget.innerHTML;
-//           document.getElementById("search").focus();
-//         });
-//       });
-//     });
-// }
+document.getElementById("select-alcohol").addEventListener("change", function(){
+var x = (this.options[this.selectedIndex].innerHTML)
+document.getElementById("saq-query").innerHTML = `<a class='btn btn-saq' href='https://www.saq.com/webapp/wcs/stores/servlet/SearchDisplay?storeId=20002&catalogId=50000&langId=-1&pageSize=20&beginIndex=0&searchCategory=Entete&searchTerm=${x}' target='_blank'>Buy ${x} on the SAQ Website</a>`
 
 
 
-
-// export {inputKeyValue}
+});

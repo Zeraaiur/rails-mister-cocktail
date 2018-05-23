@@ -1,9 +1,11 @@
 function displayNothing(){
 document.querySelectorAll(".form-class").forEach(function(element) {
   element.classList.add("display-none");
+  document.getElementById("saq-query").innerHTML= "";
 });
 removeButtonActive()
 }
+
 function removeButtonActive(){
 document.querySelectorAll(".btn-form-display").forEach(function(element) {
   element.classList.remove("btn-active");
@@ -13,6 +15,8 @@ document.querySelectorAll(".btn-form-display").forEach(function(element) {
 function displayGoodform(title){
 document.getElementById(title.toLowerCase()+"-form").classList.remove("display-none");
 }
+
+
 
 document.getElementById("alcohol-btn").addEventListener("click", function clickBtnAlcohol( event ) {
 displayNothing();

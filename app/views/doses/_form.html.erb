@@ -13,7 +13,8 @@
         <% end %>
         <%  alcohol_sort = alcohol.sort_by { |k| k["name"] } %>
     <% dose = [ "0.5 oz", "1 oz", "1.5 oz", "2 oz", "2.5 oz", "3 oz", "3.5 oz", "4 oz","4.5 oz", "5 oz", "10 oz", "15 oz", "20 oz"  ] %>
-    <%= f.collection_select :ingredient_id, alcohol_sort, :id, :name, {:include_blank => 'Choice of alcohols'}, :class => "form-control my-form-control" %>
+    <%= f.collection_select :ingredient_id, alcohol_sort, :id, :name, {:include_blank => 'Choice of alcohols'}, :class => "form-control my-form-control", :id => "select-alcohol"%>
+
 
     <%= f.select :quantity, options_for_select(dose), {}, { :class => "form-control my-form-control" } %>
 
