@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div class="row">
+
+    <%  alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");  %>
+
+
+    <% alphabet.each do |letter|  %>
+    <div class="circle-letter">
+      <%= letter %>
+    </div>
+    <% cockail_sorted = @cocktails.sort_by{|cocktail| cocktail.name.capitalize}%>
+    <% cockail_sorted.each do |cocktail|%>
+    <% if cocktail.name.first.capitalize == letter  %>
+    <h5> <%= link_to cocktail.name.capitalize, cocktail_path(cocktail)%></h5>
+    <% end %>
+    <% end %>
+
+    <hr>
+
+    <% end %>
+
+
+  </div>
+</div>
