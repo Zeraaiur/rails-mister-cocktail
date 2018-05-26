@@ -1,44 +1,54 @@
 <h2><%= @cocktail.name.capitalize %></h2>
 <div class="ingredients-already-there">
-       <% ingredient_sorted = @cocktail.ingredients.sort{|a,b| a.category <=> b.category } %>
-          <ul class="list-inline"> <small>
-          <% ingredient_sorted.each do |x| %>
-            <li class="list-inline-item text-muted">
-            <% if x.category == "fruit" %>
-                <i class="fas fa-lemon category"></i>
-            <% elsif x.category == "juice" %>
-                <i class="fas fa-tint category"></i>
-            <% elsif x.category == "alcohol" %>
-                <i class="fas fa-glass-martini category"></i>
-            <% else %>
-                <i class="fas fa-leaf category"></i>
-            <% end %>
-            <%= x.name.capitalize%>
-          </li>
-          <% end %>
-          </small></ul>
+ <% ingredient_sorted = @cocktail.ingredients.sort{|a,b| a.category <=> b.category } %>
+ <div id="addedIngredient"></div>
+
+
+
+
+ <ul class="list-inline"> <small>
+  <% ingredient_sorted.each do |x| %>
+  <li class="list-inline-item text-muted icon-list">
+    <% if x.category == "fruit" %>
+    <i class="fas fa-lemon category"></i>
+    <% elsif x.category == "juice" %>
+    <i class="fas fa-tint category"></i>
+    <% elsif x.category == "alcohol" %>
+    <i class="fas fa-glass-martini category"></i>
+    <% else %>
+    <i class="fas fa-leaf category"></i>
+    <% end %>
+    <%= x.name.capitalize%>
+  </li>
+  <% end %>
+</small></ul>
 </div>
 <hr>
 
 
-
+<% raise %>
 <div class="form-container">
 
   <h5>Add an ingredient to <%= @cocktail.name.capitalize %></h5>
 
-<div id="new-ingredient-container">
-  <button class="btn btn-form-display" id="alcohol-btn" value="Alcohol"><i class="fas fa-glass-martini category"></i><p class="very-small">Alcohol</p></button>
+  <div id="new-ingredient-container">
+    <button class="btn btn-form-display" id="alcohol-btn" value="Alcohol"><i class="fas fa-glass-martini category"></i><p class="very-small">Alcohol</p></button>
 
-  <button class="btn btn-form-display" id="juice-btn" value="Mixer"><i class="fas fa-tint category"></i><p class="very-small">Mixer</p></button>
-  <button class="btn btn-form-display" id="food-btn" value="Food"><i class="fas fa-lemon category"></i><p class="very-small">Food</p></button>
-  <button class="btn btn-form-display" id="spice-btn" value="Spice"><i class="fas fa-leaf category"></i><p class="very-small">Spice</p></button>
-</div>
-<hr>
+    <button class="btn btn-form-display" id="juice-btn" value="Mixer"><i class="fas fa-tint category"></i><p class="very-small">Mixer</p></button>
+    <button class="btn btn-form-display" id="food-btn" value="Food"><i class="fas fa-lemon category"></i><p class="very-small">Food</p></button>
+    <button class="btn btn-form-display" id="spice-btn" value="Spice"><i class="fas fa-leaf category"></i><p class="very-small">Spice</p></button>
+  </div>
+  <hr>
 
-<div class="my-form-ingredients">
-  <%= render 'form', dose: @dose %>
-</div>
-<hr>
+  <div class="my-form-ingredients">
+    <%= render 'form', dose: @dose %>
+  </div>
 
-<div id="saq-query" class="row saq-box"></div>
+  <% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+
+  <hr>
+
+  <div id="saq-query" class="row saq-box"></div>
 </div>

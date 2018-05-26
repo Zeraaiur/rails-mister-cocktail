@@ -40,13 +40,10 @@
     <% end %>
       <% ingredients_array.each do |ingredient| %>
         <% if ingredient[2] == "alcohol" %>
-          <h5><%=  ingredient[0] %> of <%=  ingredient[1].capitalize %>
-          <%= link_to "", dose_path(ingredient[3]), :method => :delete, :class => "far fa-trash-alt trashcan-show trashcan"%></h5>
+          <h5 data-dose-id="<%= ingredient[3].id %>"><%=  ingredient[0] %> of <%=  ingredient[1].capitalize %>
+          <%= link_to "", dose_path(ingredient[3]), :method => :delete, remote: true, :class => "far fa-trash-alt trashcan-show trashcan"%></h5>
         <% end %>
       <% end %>
-
-
-
 
     <% if juice %>
      <hr><p>Mixer</p>
@@ -54,8 +51,8 @@
 
       <% ingredients_array.each do |ingredient| %>
         <% if ingredient[2] == "juice" %>
-          <h5><%=  ingredient[0] %> of <%=  ingredient[1].capitalize %>
-          <%= link_to "", dose_path(ingredient[3]), :method => :delete, :class => "far fa-trash-alt trashcan-show trashcan"%></h5>
+                  <h5 data-dose-id="<%= ingredient[3].id %>"><%=  ingredient[0] %> of <%=  ingredient[1].capitalize %>
+          <%= link_to "", dose_path(ingredient[3]), :method => :delete, remote: true, :class => "far fa-trash-alt trashcan-show trashcan"%></h5>
         <% end %>
       <% end %>
 
@@ -65,8 +62,8 @@
 
       <% ingredients_array.each do |ingredient| %>
         <% if ingredient[2] == "fruit" %>
-          <h5><%=  ingredient[0] %> of <%=  ingredient[1].capitalize %>
-          <%= link_to "", dose_path(ingredient[3]), :method => :delete, :class => "far fa-trash-alt trashcan-show trashcan"%></h5>
+          <h5 data-dose-id="<%= ingredient[3].id %>"><%=  ingredient[0] %> of <%=  ingredient[1].capitalize %>
+          <%= link_to "", dose_path(ingredient[3]), :method => :delete, remote: true,  :class => "far fa-trash-alt trashcan-show trashcan"%></h5>
         <% end %>
       <% end %>
 
@@ -76,8 +73,8 @@
 
       <% ingredients_array.each do |ingredient| %>
         <% if ingredient[2] == "spice" %>
-          <h5><%=  ingredient[0] %> of <%=  ingredient[1].capitalize %>
-          <%= link_to "", dose_path(ingredient[3]), :method => :delete, :class => "far fa-trash-alt trashcan-show trashcan"%></h5>
+          <h5 data-dose-id="<%= ingredient[3].id %>"><%=  ingredient[0] %> of <%=  ingredient[1].capitalize %>
+          <%= link_to "", dose_path(ingredient[3]), :method => :delete, remote: true,  :class => "far fa-trash-alt trashcan-show trashcan"%></h5>
         <% end %>
       <% end %>
       <hr class="last-hr">
