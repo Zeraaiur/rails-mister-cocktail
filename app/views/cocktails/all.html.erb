@@ -60,7 +60,9 @@
 
           <% if cocktail.name.first.capitalize == letter  %>
 
-          <li class-"list-inline-item"><h5> <%= link_to cocktail.name.capitalize, cocktail_path(cocktail)%></h5></li><li>|</li>
+          <li class-"list-inline-item"><h5> <%= link_to cocktail.name.capitalize, cocktail_path(cocktail)%>
+                  <small class="text-muted"><%= link_to "", cocktails_all_path(cocktail), :class => "far fa-trash-alt trashcan", :method => :delete, :confirm => "Are you sure ?"%>
+          </h5></li><li>|</li>
           <% end %>
           <% end %>
         </ul>

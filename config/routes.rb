@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get "/cocktails/all", to: "cocktails#all"
+  delete "/cocktails/all", to: "cocktails#allDestroy"
+
   resources :cocktails do
     resources :doses, except: [:destroy]
   end
