@@ -2,3 +2,17 @@
 <p>Find me in app/views/cocktails/new.html.erb</p>
 
 <%= render 'form', cocktail: @cocktail %>
+
+  <% content_for :js do %>
+  <script>
+
+    function removeTabActive(){
+      document.querySelectorAll(".tab").forEach(function(element) {
+        element.classList.remove("active");
+      });
+    }
+    removeTabActive();
+    document.getElementById("tab3").classList.add("active");
+
+  </script>
+ <% end %>

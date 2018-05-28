@@ -1,25 +1,116 @@
-<div class="container">
-
-  <div class="row">
-
-    <%  alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");  %>
+<h2>All Cocktails</h2>
+<hr>
 
 
-    <% alphabet.each do |letter|  %>
-    <div class="circle-letter">
-      <%= letter %>
-    </div>
-    <% cockail_sorted = @cocktails.sort_by{|cocktail| cocktail.name.capitalize}%>
-    <% cockail_sorted.each do |cocktail|%>
-    <% if cocktail.name.first.capitalize == letter  %>
-    <h5> <%= link_to cocktail.name.capitalize, cocktail_path(cocktail)%></h5>
-    <% end %>
-    <% end %>
+<%  alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");  %>
+<% cockail_sorted = @cocktails.sort_by{|cocktail| cocktail.name.capitalize}%>
 
-    <hr>
-
-    <% end %>
+<% alphabet.each do |letter|  %>
+<%i = 0 %>
 
 
+<% cockail_sorted.each do |cocktail|%>
+<% if cocktail.name.first.capitalize == letter  %>
+<% i+=1 %>
+<% end %>
+<% end %>
+<% if i == 0 %>
+<% alphabet = alphabet - letter.split %>
+
+<% end %>
+<% end %>
+
+<div class="container-letters">
+  <ul class="list-inline letter-link">
+    <% alphabet.each do |letter| %>
+    <% if letter != alphabet.last %>
+
+
+    <a href="#<%= letter %>">
+     <li class="list-inline-item "><strong><%= letter %></strong>
+     </li></a>|
+
+     <% else %>
+     <a href="#<%= letter %>">
+      <li class="list-inline-item"><strong><%= letter %></strong>
+      </li></a>
+      <% end %>
+      <% end %>
+    </ul>
   </div>
-</div>
+  <div class="container-list">
+    <div class="row">
+
+
+      <div class="col-xs-12 col-sm-12 col-md-6 all-col-1">
+
+
+
+        <% alphabet.each_with_index do |letter, index|  %>
+
+
+        <% if index < alphabet.length / 2 %>
+
+        <a name="<%= letter %>"> <hr></a>
+        <div class="circle-letter">
+          <%= letter %>
+        </div>
+        <ul class="list-inline cocktail-list">
+          <% cockail_sorted.each do |cocktail|%>
+
+          <% if cocktail.name.first.capitalize == letter  %>
+
+          <li class-"list-inline-item"><h5> <%= link_to cocktail.name.capitalize, cocktail_path(cocktail)%></h5></li><li>|</li>
+          <% end %>
+          <% end %>
+        </ul>
+        <% end %>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 all-col-2">
+        <% alphabet.each_with_index do |letter, index|  %>
+
+
+        <% if index >= alphabet.length / 2 %>
+
+        <a name="<%= letter %>"> <hr></a>
+        <div class="circle-letter">
+          <%= letter %>
+        </div>
+        <ul class="list-inline cocktail-list">
+          <% cockail_sorted.each_with_index do |cocktail, index|%>
+
+          <% if cocktail.name.first.capitalize == letter  %>
+
+          <li class-"list-inline-item"><h5> <%= link_to cocktail.name.capitalize, cocktail_path(cocktail)%></h5></li>
+          <li>|</li>
+
+
+          <% end %>
+          <% end %>
+        </ul>
+        <% end %>
+        <% end %>
+      </div>
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <% content_for :js do %>
+  <script>
+
+    function removeTabActive(){
+      document.querySelectorAll(".tab").forEach(function(element) {
+        element.classList.remove("active");
+      });
+    }
+    removeTabActive();
+    document.getElementById("tab2").classList.add("active");
+
+  </script>
+  <% end %>
