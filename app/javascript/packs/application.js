@@ -10,4 +10,6 @@
 
 import { clickBtnDisplay } from '../components/new_dose';
 import { saqSearch } from '../components/dropdown';
+
 // document.addEventListener("keyup", inputKeyValue, false);
+import { addTabActive } from '../components/main_tabs';

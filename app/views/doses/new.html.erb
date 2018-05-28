@@ -3,9 +3,6 @@
  <% ingredient_sorted = @cocktail.ingredients.sort{|a,b| a.category <=> b.category } %>
  <div id="addedIngredient"></div>
 
-
-
-
  <ul class="list-inline"> <small>
   <% ingredient_sorted.each do |x| %>
   <li class="list-inline-item text-muted icon-list">
@@ -25,8 +22,6 @@
 </div>
 <hr>
 
-
-<% raise %>
 <div class="form-container">
 
   <h5>Add an ingredient to <%= @cocktail.name.capitalize %></h5>
@@ -41,7 +36,7 @@
   <hr>
 
   <div class="my-form-ingredients">
-    <%= render 'form', dose: @dose %>
+    <%= render 'form', dose: @dose, cocktail: @cocktail%>
   </div>
 
   <% if flash[:notice] %>
@@ -52,3 +47,5 @@
 
   <div id="saq-query" class="row saq-box"></div>
 </div>
+
+
