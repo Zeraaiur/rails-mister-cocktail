@@ -10,7 +10,10 @@
 
 	<div class="form-class display-none" id="alcohol-form">
 		<% ing_alcohol.name.capitalize! %>
-		<%= form_for [@cocktail, @dose], :remote => true do |f| %>
+
+
+
+		<%= form_for [@cocktail, @dose], {class: 'form'} do |f| %>
 		<%= f.collection_select :ingredient_id, ing_alcohol, :id, :name, {:include_blank => 'Choice of alcohols'}, :class => "form-control my-form-control", :id => "select-alcohol"%>
 		<%= f.select :quantity, options_for_select(dose), {}, { :class => "form-control my-form-control" } %>
 		<%= f.submit 'Add ingredient ', :class => 'form-control my-form-btn' %>

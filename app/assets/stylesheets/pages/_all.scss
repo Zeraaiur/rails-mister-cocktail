@@ -1,0 +1,24 @@
+.circle-letter{
+  background-color:$yellow;
+  width:100%;
+  display:inline-block;
+  text-align:center;
+  font-weight:bold;
+  color:white;
+  font-size:1em;
+
+}
+.letter-link a{
+color:black;
+}
+
+.all-col-1{
+  padding: 0px 30px;
+}
+.all-col-2{
+padding: 0px 30px;
+}
+.cocktail-list li:last-child{
+  display:none;
+
+}
